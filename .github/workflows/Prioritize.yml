@@ -42,6 +42,4 @@ jobs:
       run: |
         curl -LJO https://unified-agent.s3.amazonaws.com/wss-unified-agent.jar
         echo Unified Agent downloaded successfully
-        WARFILE=$(find ./ -type f -wholename "*/target/*.jar")
-        echo $WARFILE will be added to appPath
-        java -jar wss-unified-agent.jar -appPath $WARFILE -d ./
+        java -jar wss-unified-agent.jar -appPath ./atomhopper/target/atomhopper-1.2.35-SNAPSHOT/WEB-INF/lib/slf4j-api-1.6.5.jar -d ./atomhopper
